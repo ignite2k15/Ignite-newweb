@@ -1,73 +1,42 @@
-import React from 'react';
+import React from "react";
+import "../styles/team.css";
 
 const Team = () => {
-  return (
-    <div>
-      <section className="team">
-        <div className="container">
-          <h2 className="title team__title">
-            <span>t</span>
-            <span>•</span>
-            <span>e</span>
-            <span>•</span>
-            <span>a</span>
-            <span>•</span>
-            <span>m</span>
-          </h2>
 
-          <ul className="team__list">
-            <li className="team__item">
-              <img src="/img/team/1.png" alt="person" />
-              <span className="team__name">Viktorius <br /> Eisenhart</span>
-              <span className="team__descr">CEO</span>
-            </li>
+    const teamData = {
+        I: { title: 'Viktorius Eisenhart', description: 'CEO' },
+        II: { title: 'Amir Al-Mekhanik', description: 'COO' },
+        III: { title: 'Natasha Thunderforge', description: 'CMO' },
+        IV: { title: 'Gustav Stahlfist', description: 'Head of Analysis' },
+        V: { title: 'Lei Qiang Mechblade', description: 'Chief Developer' },
+        VI: { title: 'Grigor Varnilov', description: 'Chief Design Engineer' },
+        VII: { title: 'Olivia Steelreaper', description: 'Head of Customer Service' },
+        VIII: { title: 'Hans Müller', description: 'Head of logistic and procurement' }
+    };
 
-            <li className="team__item">
-              <img src="/img/team/2.png" alt="person" />
-              <span className="team__name">Amir <br /> Al-Mekhanik</span>
-              <span className="team__descr">COO</span>
-            </li>
-
-            <li className="team__item">
-              <img src="/img/team/3.png" alt="person" />
-              <span className="team__name">Natasha <br /> Thunderforge</span>
-              <span className="team__descr">CMO</span>
-            </li>
-
-            <li className="team__item">
-              <img src="/img/team/4.png" alt="person" />
-              <span className="team__name">Gustav <br /> Stahlfist</span>
-              <span className="team__descr">Head of Analysis</span>
-            </li>
-
-            <li className="team__item">
-              <img src="/img/team/5.png" alt="person" />
-              <span className="team__name">Lei Qiang <br /> Mechblade</span>
-              <span className="team__descr">Chief Developer</span>
-            </li>
-
-            <li className="team__item">
-              <img src="/img/team/6.png" alt="person" />
-              <span className="team__name">Grigor <br /> Varnilov</span>
-              <span className="team__descr">Chief Design Engineer</span>
-            </li>
-
-            <li className="team__item">
-              <img src="/img/team/7.png" alt="person" />
-              <span className="team__name">Olivia <br /> Steelreaper</span>
-              <span className="team__descr">Head of Customer Service</span>
-            </li>
-
-            <li className="team__item">
-              <img src="/img/team/8.png" alt="person" />
-              <span className="team__name">Hans <br /> Müller</span>
-              <span className="team__descr">Head of logistic and procurement</span>
-            </li>
-          </ul>
+    return (
+        <div>
+            <h2 className="title">
+                <span>T</span>
+                <span>•</span>
+                <span>E</span>
+                <span>•</span>
+                <span>A</span>
+                <span>•</span>
+                <span>M</span>
+                
+            </h2>
+            <div className="team">
+                {Object.keys(teamData).map(serialNumber => (
+                    <div key={serialNumber} className="team_item">
+                        <h1>{serialNumber}</h1>
+                        <p>{teamData[serialNumber].title}</p>
+                        <p>{teamData[serialNumber].description}</p>
+                    </div>
+                ))}
+            </div>
         </div>
-      </section>
-    </div>
-  );
-}
+    );
+};
 
 export default Team;
