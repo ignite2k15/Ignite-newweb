@@ -11,13 +11,13 @@ const TextAnimation = ({ text }) => {
   const textChars = text.split('');
 
   return (
-    <motion.h1 variants={charVariants} initial="hidden" animate="reveal">
+    <motion.p variants={charVariants} initial="hidden" animate="reveal">
       {textChars.map((char, index) => (
         <motion.span key={index} transition={{ duration: 1.35 }} variants={charVariants}>
           {char}
         </motion.span>
       ))}
-    </motion.h1>
+    </motion.p>
   );
 };
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import '../styles/Whoweare.css'
 import TextAnimation from '../Container/TextAnimation'
 const Whoweare = () => {
   return (

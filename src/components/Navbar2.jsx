@@ -1,6 +1,5 @@
 import React from 'react';
 import { TiSocialLinkedinCircular, TiSocialTwitterCircular, TiMail } from "react-icons/ti";
-import '../styles/Navbar2.css';
 
 const Navbar2 = () => {
   const handleNavigation = (url) => {

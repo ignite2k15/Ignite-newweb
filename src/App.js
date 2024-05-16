@@ -12,8 +12,10 @@ import Contact from './components/Contact';
 function App() {
   return (
     <div className="App">
-      <Navbar2/>
+      <Navbar2/> 
+      <br/>
       <Navbar/>
+      <br/>
       <About/>
       <Whoweare/>
       <Services/>
