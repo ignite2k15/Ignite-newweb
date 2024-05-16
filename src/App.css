@@ -2,8 +2,8 @@
   text-align: center;
   color: white;
   background-color: #000000;
-  --text-primary : #b4141e;
+  --text-primary : rgb(184, 5, 5);
   --text-secondary : "white";
   --bg-primary:#000;
-  --bg-secondary:#b4141e;
+  --bg-secondary:rgb(184, 5, 5);
 }
