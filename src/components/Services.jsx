@@ -30,7 +30,7 @@ const Services = () => {
                 <span>•</span>
                 <span>s</span>
             </h2>
-            <ul className="services__list">
+            <div className="services__list">
                 {Object.keys(servicesData).map(serialNumber => (
                     <li key={serialNumber} className="services__item">
                         <div className="services__step">
@@ -44,7 +44,7 @@ const Services = () => {
                         </div>
                     </li>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 };
