@@ -3,8 +3,8 @@ import { color, motion } from 'framer-motion';
 
 const TextAnimation = ({ text }) => {
   const charVariants = {
-    hidden: { opacity: 1,color:"white" },
-    reveal: { opacity: 1, color:"var(--text-primary)" },
+    hidden: { opacity: 0,color:"white" },
+    reveal: { opacity: 1, color:"white" },
   };
 
   // Split the text into individual characters
