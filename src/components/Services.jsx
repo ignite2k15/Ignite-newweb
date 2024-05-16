@@ -1,7 +1,9 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
 
 const Services = () => {
-
+    const { ref, inView } = useInView();
     const servicesData = {
         1: { title: 'Procurement', description: 'Design Planning and Support: Bridging the communication gap between architects and contractors through project planning, design, and execution. Collaborative design team involvement to ensure timely construction delivery.' },
         2: { title: 'Construction and Design Bureau', description: 'Sustainability Initiatives: Implementation of sustainable practices in projects, emphasizing efficiency, health, community welfare, waste control, recycling of materials, and improved air quality. Familiarity with LEED, WELL, and Green Globes programs.' },
@@ -31,18 +33,28 @@ const Services = () => {
                 <span>s</span>
             </h2>
             <div className="services__list">
-                {Object.keys(servicesData).map(serialNumber => (
-                    <li key={serialNumber} className="services__item">
+                {Object.keys(servicesData).map((serialNumber, index) => (
+                    <motion.div
+                        key={serialNumber}
+                        className="services__item"
+                        initial={{ x: index % 2 === 0 ? -200 : 200 }}
+                        animate={{ x: 0 }}
+                        transition={{ duration: 0.6, delay: index * 0.2 }}
+                    >
                         <div className="services__step">
                             <span>{serialNumber}</span>
                             <div>{servicesData[serialNumber].title}</div>
                             <div className="line"></div>
                         </div>
                         <div className="services__slide">
-                            <div className="services__subtitle">{servicesData[serialNumber].title}</div>
-                            <p className="services__text">{servicesData[serialNumber].description}</p>
+                            <div className="services__subtitle">
+                                {servicesData[serialNumber].title}
+                            </div>
+                            <p className="services__text">
+                                {servicesData[serialNumber].description}
+                            </p>
                         </div>
-                    </li>
+                    </motion.div>
                 ))}
             </div>
         </div>

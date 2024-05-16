@@ -1,9 +1,15 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Card = () => {
   return (
     <div className="for-card-t">
-      <div className="we-do__box">
+      <motion.div
+        className="we-do__box"
+        initial={{ opacity: 0,x:-200, y: 0 }}
+        animate={{ opacity: 1,x:0, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
         <div className="we-do__number">I</div>
         <h3 className="we-do__subtitle">Construction</h3>
         <p className="we-do__text">
@@ -37,8 +43,13 @@ const Card = () => {
             ></line>
           </svg>
         </a>
-      </div>
-      <div className="we-do__box">
+      </motion.div>
+      <motion.div
+        className="we-do__box"
+        initial={{ opacity: 0,x:-400, y:0 }}
+        animate={{ opacity: 1,x:0, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
         <div className="we-do__number">II</div>
         <h3 className="we-do__subtitle">Construction</h3>
         <p className="we-do__text">
@@ -72,7 +83,7 @@ const Card = () => {
             ></line>
           </svg>
         </a>
-      </div>
+      </motion.div>
     </div>
   );
 };
