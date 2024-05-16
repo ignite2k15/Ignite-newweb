@@ -4,7 +4,7 @@ import { color, motion } from 'framer-motion';
 const TextAnimation = ({ text }) => {
   const charVariants = {
     hidden: { opacity: 1,color:"white" },
-    reveal: { opacity: 1, color:"red" },
+    reveal: { opacity: 1, color:"var(--text-primary)" },
   };
 
   // Split the text into individual characters

@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/About.css";
+import Card from "./Card";
 
 const About = () => {
   return (
@@ -22,6 +23,7 @@ const About = () => {
           <span>•</span>
           <span>o</span>
         </h2>
+        <Card/>
       </div>
     </div>
   );

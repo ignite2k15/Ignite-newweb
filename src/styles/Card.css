@@ -14,7 +14,7 @@
     padding: 10px 0px 10px 0px;
   }
 .we-do__box:hover{
-    background-color: rgb(168, 10, 10);
+    background-color: var(--bg-secondary);
 }
   
   .we-do__number{
