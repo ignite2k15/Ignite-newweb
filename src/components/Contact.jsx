@@ -27,7 +27,7 @@ const Contact = () => {
 
   return (
     <div>
-      <h2 className="title we-do__title">
+      <h1 className="title we-do__title">
           <span>C</span>
           <span>•</span>
           <span>O</span>
@@ -40,7 +40,7 @@ const Contact = () => {
           <span>•</span>
           <span>C</span>
           <span>T</span>
-        </h2>
+        </h1>
       <form onSubmit={handleSubmit} className="for-total-contact">
         <div className="for-total-contact">
           <input

@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div>
       <div>
-        <h2 className="title we-do__title">
+        <h1 className="title we-do__title">
           <span>w</span>
           <span>•</span>
           <span>h</span>
@@ -21,7 +21,7 @@ const About = () => {
           <span>d</span>
           <span>•</span>
           <span>o</span>
-        </h2>
+        </h1>
         <Card/>
       </div>
     </div>

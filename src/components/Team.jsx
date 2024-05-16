@@ -15,7 +15,7 @@ const Team = () => {
 
     return (
         <div>
-            <h2 className="title">
+            <h1 className="title we-do__title">
                 <span>T</span>
                 <span>•</span>
                 <span>E</span>
@@ -24,7 +24,7 @@ const Team = () => {
                 <span>•</span>
                 <span>M</span>
                 
-            </h2>
+            </h1>
             <div className="team">
                 {Object.keys(teamData).map(serialNumber => (
                     <div key={serialNumber} className="team_item">
