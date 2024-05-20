@@ -1,7 +1,8 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
 
 const Team = () => {
-
     const teamData = {
         I: { title: 'Viktorius Eisenhart', description: 'CEO' },
         II: { title: 'Amir Al-Mekhanik', description: 'COO' },
@@ -23,18 +24,31 @@ const Team = () => {
                 <span>A</span>
                 <span>•</span>
                 <span>M</span>
-                
             </h1>
             <div className="team">
                 {Object.keys(teamData).map(serialNumber => (
-                    <div key={serialNumber} className="team_item">
-                        <h1>{serialNumber}</h1>
-                        <p>{teamData[serialNumber].title}</p>
-                        <p>{teamData[serialNumber].description}</p>
-                    </div>
+                    <TeamMember key={serialNumber} serialNumber={serialNumber} data={teamData[serialNumber]} />
                 ))}
             </div>
         </div>
+    );
+};
+
+const TeamMember = ({ serialNumber, data }) => {
+    const { ref, inView } = useInView();
+
+    return (
+        <motion.div
+            ref={ref}
+            className="team_item"
+            initial={{ opacity: 0, y: -20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
+        >
+            <h1>{serialNumber}</h1>
+            <p>{data.title}</p>
+            <p>{data.description}</p>
+        </motion.div>
     );
 };
 
