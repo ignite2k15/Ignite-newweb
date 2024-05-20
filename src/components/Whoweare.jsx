@@ -1,8 +1,12 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import TextAnimation from '../Container/TextAnimation'
 const Whoweare = () => {
   return (
-    <div>
+    <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}>
        <h2 className="title we-do__title">
           <span>w</span>
           <span>•</span>
@@ -25,7 +29,7 @@ const Whoweare = () => {
         
         <TextAnimation text="WE PROVIDE A FULL RANGE OF SERVICES IN THE FIELD OF CRYPTOCURRENCY MINING: HOSTING AND SUPPLIES, MAINTENANCE AND SERVICE, CONSULTING, SOFTWARE DEVELOPMENT AND ENGINEERING FOR MINING SYSTEMS AND DATA CENTER INFRASTRUCTURE." />
         </p>
-    </div>
+    </motion.div>
   )
 }
 

@@ -1,9 +1,14 @@
 import React from "react";
 import Card from "./Card";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+    >
       <div>
         <h1 className="title we-do__title">
           <span>w</span>
@@ -22,9 +27,9 @@ const About = () => {
           <span>•</span>
           <span>o</span>
         </h1>
-        <Card/>
+        <Card />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

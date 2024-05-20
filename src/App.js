@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import Navbar2 from './components/Navbar2';
 import About from './components/About';
@@ -7,20 +7,26 @@ import Services from './components/Services';
 import Navbar from './components/Navbar';
 import Team from './components/Team';
 import Contact from './components/Contact';
-
+import { motion } from 'framer-motion';
 
 function App() {
   return (
     <div className="App">
-      <Navbar2/> 
-      <br/>
-      <Navbar/>
-      <br/>
-      <About/>
-      <Whoweare/>
-      <Services/>
-      <Team/>
-      <Contact/>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <Navbar2 />
+        <br />
+        <Navbar />
+        <br />
+        <About />
+        <Whoweare />
+        <Services />
+        <Team />
+        <Contact />
+      </motion.div>
     </div>
   );
 }
